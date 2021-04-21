@@ -1,0 +1,4 @@
+La prenotazione è avvenuta con successo 
+La prenotazione è avvenuta con successo 
+Non è stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilità  di tavolo
+La prenotazione è avvenuta con successo 

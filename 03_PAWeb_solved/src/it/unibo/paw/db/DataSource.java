@@ -9,8 +9,8 @@ public class DataSource {
     
     // nome del database
     private String dbName = "tw_stud";
-    private String userName = "dbuser";
-    private String password = "dbpasswd";
+    private String userName = "00880643";
+    private String password = "paperino3011!";
     
     
     public final static int DB2 = 0;
