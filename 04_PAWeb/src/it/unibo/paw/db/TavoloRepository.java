@@ -15,10 +15,17 @@ public class TavoloRepository {
     private static final String ID = "id";
     private static final String NUMERO = "numero";
 
-    static String read_avaible_table = "SELCECT " + NUMERO + " FROM " + TABLE + " WHERE capienza >= ? AND " + ID
+    static String read_avaible_table = "SELECT " + NUMERO + " FROM " + TABLE + " WHERE capienza >= ? AND " + ID
             + "NOT IN ( SELECT idTavolo FROM prenotazione WHERE data = ?)";
 
-    String DisponibilitaTavolo(Date data, int numeroPersone)
+    static String get_table_id_from_num = "SELECT " + ID + " FROM " + TABLE + " WHERE " + NUMERO + " = ?";
+
+    public TavoloRepository(int databaseType) {
+		dataSource = new DataSource(databaseType);
+	}
+
+            
+    static String DisponibilitaTavolo(Date data, int numeroPersone)
     {
         String result = null;
         Connection connection = null;
@@ -27,7 +34,7 @@ public class TavoloRepository {
             connection = this.dataSource.getConnection();
             statement = connection.prepareStatement(read_avaible_table);
             statement.setInt(1, numeroPersone);
-            statement.setDate(2, data);
+            statement.setDate(2, (java.sql.Date) data);
             ResultSet rs = statement.executeQuery();
             if(rs.next())
             {
@@ -56,6 +63,10 @@ public class TavoloRepository {
         }
 
 
+    }
+
+    public static int getTavoloById(String tableAvaible) {
+        Connection conn = this.dataSource.getConnection();
     }
 
 }

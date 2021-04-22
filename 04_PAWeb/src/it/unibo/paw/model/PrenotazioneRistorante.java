@@ -20,6 +20,9 @@ public class PrenotazioneRistorante {
         this.idTavoloPrenotazione = idTavoloPrenotazione;
     }
 
+    public PrenotazioneRistorante() {
+    }
+
     public int getIdPrenotazione() {
         return idPrenotazione;
     }
