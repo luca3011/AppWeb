@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.time.LocalDate;
 
+import it.unibo.paw.dao.PersistenceException;
 import it.unibo.paw.db.*;
 import it.unibo.paw.model.*;
 
@@ -77,27 +78,27 @@ public class TestResturant {
 			String result = "";
 			d = LocalDate.of(2017, 1, 18);
 			if (RichiestaPrenotazione("PincoPanco", Date.valueOf(d), 4, "asdasd")) {
-				result = "La prenotazione è avvenuta con successo ";
+				result = "La prenotazione ï¿½ avvenuta con successo ";
 			} else
-				result = "Non è stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilità  di tavolo";
+				result = "Non ï¿½ stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilitï¿½ di tavolo";
 			pw.println(result);
 			d = LocalDate.of(2017, 1, 18);
 			if (RichiestaPrenotazione("PincoPallino", Date.valueOf(d), 10, "asdasd")) {
-				result = "La prenotazione è avvenuta con successo ";
+				result = "La prenotazione ï¿½ avvenuta con successo ";
 			} else
-				result = "Non è stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilità  di tavolo";
+				result = "Non ï¿½ stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilitï¿½ di tavolo";
 			pw.println(result);
 			d = LocalDate.of(2017, 1, 18);
 			if (RichiestaPrenotazione("PancoPinco", Date.valueOf(d), 5, "asdasd")) {
-				result = "La prenotazione è avvenuta con successo ";
+				result = "La prenotazione ï¿½ avvenuta con successo ";
 			} else
-				result = "Non è stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilità  di tavolo";
+				result = "Non ï¿½ stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilitï¿½ di tavolo";
 			pw.println(result);
 			d = LocalDate.of(2017, 1, 18);
 			if (RichiestaPrenotazione("PallinoPanco", Date.valueOf(d), 3, "asdasd")) {
-				result = "La prenotazione è avvenuta con successo ";
+				result = "La prenotazione ï¿½ avvenuta con successo ";
 			} else
-				result = "Non è stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilità  di tavolo";
+				result = "Non ï¿½ stato possibile prenotare un tavolo per la data e/o le persone indicate causa indisponibilitï¿½ di tavolo";
 			pw.println(result);
 		} catch (IOException e) {
 			e.printStackTrace();
