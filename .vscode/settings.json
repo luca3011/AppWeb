@@ -1,2 +1,7 @@
 {
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "08_PAWeb/lib/hibernate3.jar",
+        "08_PAWeb/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar"
+    ]
 }
